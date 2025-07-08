@@ -1,0 +1,26 @@
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput type="date" formControlName="date" />
+      <mat-error *ngIf="form.get('date')?.hasError('required')">Date is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>What did you do yesterday?</mat-label>
+      <textarea matInput formControlName="yesterday"></textarea>
+      <mat-error *ngIf="form.get('yesterday')?.hasError('required')">This field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>What are your plans today?</mat-label>
+      <textarea matInput formControlName="today"></textarea>
+      <mat-error *ngIf="form.get('today')?.hasError('required')">This field is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Any blockers?</mat-label>
+      <textarea matInput formControlName="blockers"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="loading || form.invalid">
+      {{ entry ? 'Update' : 'Add' }} Entry
+    </button>
+  </form>
+</mat-card>

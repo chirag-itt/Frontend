@@ -1,0 +1,23 @@
+<mat-card>
+  <h2>Weekly Summary</h2>
+  <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+    <button mat-stroked-button color="primary" (click)="export('csv')">Export as CSV</button>
+    <button mat-stroked-button color="accent" (click)="export('pdf')">Export as PDF</button>
+  </div>
+  <mat-divider></mat-divider>
+  <div style="margin-top: 24px;"></div>
+  <mat-accordion class="summary-list attractive-accordion" multi>
+    <mat-expansion-panel *ngFor="let e of entries">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ e.date | date }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="summary-item">
+        <div class="summary-row"><mat-icon color="primary">history</mat-icon> <strong>Yesterday:</strong> {{ e.yesterday }}</div>
+        <div class="summary-row"><mat-icon color="accent">today</mat-icon> <strong>Today:</strong> {{ e.today }}</div>
+        <div class="summary-row"><mat-icon color="warn">block</mat-icon> <strong>Blockers:</strong> {{ e.blockers }}</div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>

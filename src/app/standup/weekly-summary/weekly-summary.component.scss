@@ -1,0 +1,47 @@
+mat-card {
+  max-width: 900px;
+  margin: 2rem auto;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  mat-list-item {
+    margin-bottom: 1rem;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+.summary-list {
+  margin-top: 40px;
+}
+
+.attractive-accordion {
+  background: #fafbfc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding-bottom: 8px;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.summary-row mat-icon {
+  vertical-align: middle;
+}
+
+.summary-item {
+  padding: 16px 0 8px 0;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  display: block;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}

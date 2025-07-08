@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StandupService {
-  private api = 'https://127.0.0.1:7149/api/standup';
+  private api = 'https://backend-thnz.onrender.com/api/standup';
 
   constructor(private http: HttpClient) {}
 

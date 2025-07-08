@@ -6,7 +6,7 @@ import { User } from '../shared/models.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private api = 'https://127.0.0.1:7149/api/auth';
+  private api = 'https://backend-thnz.onrender.com/api/auth';
   private userSubject = new BehaviorSubject<User | null>(null);
   user$ = this.userSubject.asObservable();
 
